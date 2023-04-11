@@ -1,0 +1,24 @@
+{
+  "metadata" : {
+    "name" : "neb-dungeon-avianairship",
+    "species" : "avian",
+    "rules" : [
+    ],
+    "anchor" : [ "modifiedavianairship" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 20,
+    "extendSurfaceFreeSpace" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "modifiedavianairship",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "modifiedavianairship.json" ]
+    }
+  ]
+}

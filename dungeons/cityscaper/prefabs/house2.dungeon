@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "neb-prefab-house2",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "house2" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "house2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "house2.json" ]
+    }
+  ]
+}

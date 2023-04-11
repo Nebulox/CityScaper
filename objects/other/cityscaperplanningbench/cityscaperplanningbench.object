@@ -1,0 +1,53 @@
+{
+  "objectName" : "neb-cityscaperplanningbench",
+  "colonyTags" : ["human", "crafting"],
+  "rarity" : "Legendary",
+  "category" : "crafting",
+
+  "radioMessagesOnPickup" : [ "neb-pickupplanningbench" ],
+  "printable" : false,
+  "price" : 250,
+  "description" : "A wooden workbench designed for plotting out your next city plans.",
+  "shortdescription" : "City Planning Table",
+  "race" : "human",
+
+  "apexDescription" : "A keypad. I can use it to lock a door with a passcode.",
+  "avianDescription" : "A keypad, useful for locking precious gems in a vault.",
+  "floranDescription" : "Floran presssess buttonss, Floran unlockss doorss!",
+  "glitchDescription" : "Excited. What might this unlock?",
+  "humanDescription" : "It's a keypad. I should try some combinations!",
+  "hylotlDescription" : "A keypad, highly effective at locking things away securely.",
+  "novakidDescription" : "I've never been good at remembering passcodes.",
+
+  "inventoryIcon" : "cityscaperplanningbenchicon.png",
+  "orientations" : [
+    {
+      "image" : "cityscaperplanningbench.png:<color>",
+      "imagePosition" : [0, 0],
+      "direction" : "left",
+      "flipImages" : true,
+      "spaces" : [
+	    [0, 3], [1, 3], [2, 3], [3, 3], [4, 3],
+        [0, 2], [1, 2], [2, 2], [3, 2], [4, 2],
+        [0, 1], [1, 1], [2, 1], [3, 1], [4, 1],
+        [0, 0], [1, 0], [2, 0], [3, 0], [4, 0]
+      ],
+      "anchors" : [ "bottom" ]
+    },
+    {
+      "image" : "cityscaperplanningbench.png:<color>",
+      "imagePosition" : [0, 0],
+      "direction" : "right",
+      "spaces" : [
+        [0, 3], [1, 3], [2, 3], [3, 3], [4, 3],
+        [0, 2], [1, 2], [2, 2], [3, 2], [4, 2],
+        [0, 1], [1, 1], [2, 1], [3, 1], [4, 1],
+        [0, 0], [1, 0], [2, 0], [3, 0], [4, 0]
+      ],
+      "anchors" : [ "bottom" ]
+    }
+  ],
+  "placementImagePosition" : [0, 0],
+  "interactAction" : "ScriptPane",
+  "interactData" : "/interface/scripted/cityscaper/neb-cityscaper.config"
+}

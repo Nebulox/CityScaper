@@ -1,0 +1,15 @@
+{
+  "input" : [
+    { "item" : "titaniumbar", "count" : 10 },
+    { "item" : "tungstenbar", "count" : 5 },
+    { "item" : "darkwoodmaterial", "count" : 45 },
+    { "item" : "cobblestonematerial", "count" : 25 },
+    { "item" : "dirtmaterial", "count" : 10 }    
+  ],
+  "output" : {
+    "item" : "neb-cityscaperplanningbench",
+    "count" : 1
+  },
+  "duration" : 5,
+  "groups" : [ "inventorstable2", "craftingstations", "all" ]
+}

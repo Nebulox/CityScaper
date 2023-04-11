@@ -1,0 +1,10 @@
+[
+	{ 	"op": "add", 
+		"path": "/neb-pickupplanningbench",
+		"value": 		
+		{
+			"type" : "tutorial",
+			"text" : "Ah! A City Planning Table. This will allow you to plan and create parts of a city with ease!"
+		}
+	}
+]

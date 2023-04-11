@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "neb-prefab-bridge",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "bridge" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "bridge",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "bridge.json" ]
+    }
+  ]
+}

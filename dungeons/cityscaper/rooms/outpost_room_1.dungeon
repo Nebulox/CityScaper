@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "neb-room-outpost_room_1",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "outpost_room_1" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "outpost_room_1",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "outpost_room_1.json" ]
+    }
+  ]
+}

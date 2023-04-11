@@ -1,0 +1,8 @@
+{
+  "type" : "neb-cityscaperdungeonplacer",
+
+  "scripts" : [
+  	"/stagehands/other/neb-cityscaperdungeonplacer/neb-cityscaperdungeonplacer.lua"
+  ],
+  "scriptDelta" : 10
+}

@@ -1,0 +1,29 @@
+{
+  "itemName" : "neb-cityscaper",
+  "level" : 1,
+  "price" : 250,
+  "maxStack" : 1,
+  "rarity" : "Essential",
+  //"tooltipKind" : "base",
+  "category" : "Other",
+  "description" : "Places a dungeon. ^red;Be careful where you place it.^reset;",
+  "shortdescription" : "CityScaper - Avian Air Ship",
+  "twoHanded" : true,
+
+  "inventoryIcon" : "/interface/scripted/cityscaper/modules/vanilla/avianairship.png",
+  "animation" : "neb-cityscaper.animation",
+  "animationParts" : {
+    "manipulator" : "neb-cityscaper.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "place" : [ "/sfx/objects/colonydeed_partyhorn.ogg" ]
+    }
+  },
+  "animationScripts" : ["/items/active/effects/neb-cityscaper.lua"],
+  
+  "scripts" : ["neb-cityscaper.lua"],
+  
+  "dungeonPreview" : "/interface/scripted/cityscaper/modules/vanilla/avianairship.png",
+  "dungeon" : "neb-prefab-avianairship"
+}

@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "neb-room-outpost_elevator_room",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "outpost_elevator_room" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "outpost_elevator_room",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "outpost_elevator_room.json" ]
+    }
+  ]
+}

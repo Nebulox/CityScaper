@@ -1,0 +1,11 @@
+[
+  {
+	"op": "add",
+    "path": "/normal/-",
+    "value": {
+	  "label" : "Cityscaper",
+	  "pane" : "/interface/scripted/cityscaper/neb-cityscaper.config",
+	  "icon" : "/interface/scripted/cityscaper/icon.png" 
+	}
+  }
+]
