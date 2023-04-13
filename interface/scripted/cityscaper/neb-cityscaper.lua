@@ -22,8 +22,6 @@ end
 function populateTabsAndModules()
   widget.clearListItems(self_moduleList)
   widget.clearListItems(self_tabList)
-  widget.setSliderEnabled("tabScrollArea.hScrollBar", false)
-  widget.setSliderEnabled("moduleScrollArea.hScrollBar", false)
   
   for x, module in pairs(self_moduleConfig.modules or {}) do
     local moduleItem = widget.addListItem(self_moduleList)
@@ -54,17 +52,33 @@ function populateTabsAndModules()
   end
 end
 
-function populateCurrentList()
+function populateCurrentList(newTab, searchQuery)
   widget.clearListItems(self_dungeonList)
+  
+  if newTab then
+    widget.setImage("dungeonPreview", "/assetmissing.png")
+    widget.setText("dungeonShortDescription", "")
+    widget.setText("dungeonSizeLabel", "")
+    widget.setText("materialLabel", "")
+    widget.setText("costLabel", "")
+  end
   
   local currentList = self_moduleConfig.modules[self_currentModule].config[self_currentTab]
   for x, config in ipairs(currentList) do
-	local listItem = widget.addListItem(self_dungeonList)
-	widget.setText(string.format("%s.%s.dungeonName", self_dungeonList, listItem), config.shortDescription)
-	widget.setImage(string.format("%s.%s.dungeonIcon", self_dungeonList, listItem), config.previewImage or "/assetmissing.png")
+    local dungeonName = config.shortDescription
+	if (not searchQuery and true) or (searchQuery and dungeonName:lower():find(searchQuery)) then
+	  local listItem = widget.addListItem(self_dungeonList)
+	  widget.setText(string.format("%s.%s.dungeonName", self_dungeonList, listItem), dungeonName)
+	  widget.setImage(string.format("%s.%s.dungeonIcon", self_dungeonList, listItem), config.previewImage or "/assetmissing.png")
 	
-	widget.setData(string.format("%s.%s", self_dungeonList, listItem), x)
+	  widget.setData(string.format("%s.%s", self_dungeonList, listItem), x)
+    end
   end
+end
+
+function filter(newTab)
+  local query = widget.getText("filter")
+  populateCurrentList(newTab, query:lower())
 end
 
 function moduleSelected()
@@ -72,7 +86,7 @@ function moduleSelected()
   if currentModule then
 	local x = widget.getData(string.format("%s.%s", self_moduleList, currentModule))
 	self_currentModule = x
-	if self_currentTab then	populateCurrentList() end
+	if self_currentTab then	filter(true) end
   end
 end
 
@@ -81,7 +95,7 @@ function tabSelected()
   if currentTab then
 	local tabName = widget.getData(string.format("%s.%s", self_tabList, currentTab))
 	self_currentTab = tabName
-	if self_currentModule then populateCurrentList() end
+	if self_currentModule then filter(true) end
   end
 end
 
@@ -95,8 +109,8 @@ function dungeonSelected()
     local config = self_moduleConfig.modules[self_currentModule].config[self_currentTab][self_currentDungeon]
     widget.setImage("dungeonPreview", config.previewImage or "/assetmissing.png")
     widget.setText("dungeonShortDescription", config.shortDescription or "NAME MISSING")
-	local dungeonSize = config.dungeonSize or {"x", "x"}
-    widget.setText("dungeonSizeLabel", tostring(dungeonSize[1]) .. "/" .. tostring(dungeonSize[2]))
+	local dungeonSize = config.dungeonSize or {"X", "Y"}
+    widget.setText("dungeonSizeLabel", tostring(dungeonSize[1]) .. " x " .. tostring(dungeonSize[2]))
 	
 	setMaterialsText(config.cost)
     widget.setButtonEnabled("btnApplyDungeon", sufficientCosts(config.cost))
@@ -105,7 +119,14 @@ end
 
 function generateBlueprint()
   local config = self_moduleConfig.modules[self_currentModule].config[self_currentTab][self_currentDungeon]
-  local itemParameters = {dungeon = config.dungeon, dungeonPreview = config.previewImage, shortdescription = config.shortDescription, inventoryIcon = config.previewImage}
+  local itemParameters = {
+    dungeon = config.dungeon,
+	dungeonPreview = config.previewImage,
+	shortdescription = config.shortDescription,
+	inventoryIcon = {
+	  { image = config.previewImage } 
+	} 
+  }
   local newCityScaper = root.createItem({ name = "neb-cityscaper", count = 1, parameters = itemParameters})
   local consumeCosts = consumeMaterials(config.cost)
   if consumeCosts then

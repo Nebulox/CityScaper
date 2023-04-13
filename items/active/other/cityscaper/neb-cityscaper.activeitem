@@ -10,7 +10,7 @@
   "shortdescription" : "CityScaper - Avian Air Ship",
   "twoHanded" : true,
 
-  "inventoryIcon" : "/interface/scripted/cityscaper/modules/vanilla/avianairship.png",
+  "inventoryIcon" : "neb-cityscaper.png",
   "animation" : "neb-cityscaper.animation",
   "animationParts" : {
     "manipulator" : "neb-cityscaper.png"

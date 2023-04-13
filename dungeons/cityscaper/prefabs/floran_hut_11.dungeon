@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "neb-prefab-floran_hut_11",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "floran_hut_11" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "floran_hut_11",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "floran_hut_11.json" ]
+    }
+  ]
+}
