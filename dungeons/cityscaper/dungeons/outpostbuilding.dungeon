@@ -1,0 +1,24 @@
+{
+  "metadata" : {
+    "name" : "neb-dungeon-outpostbuilding",
+    "rules" : [
+    ],
+    "anchor" : [ "outpostbuilding" ],
+    "species" : "generic",
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 20,
+    "extendSurfaceFreeSpace" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "outpostbuilding",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "outpostbuilding.json" ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "metadata" : {
+    "name" : "neb-prefab-peacekeeper_outpost",
+    "rules" : [
+    ],
+    "anchor" : [ "peacekeeper_outpost" ],
+    "species" : "generic",
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 20,
+    "extendSurfaceFreeSpace" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "peacekeeper_outpost",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "peacekeeper_outpost.json" ]
+    }
+  ]
+}

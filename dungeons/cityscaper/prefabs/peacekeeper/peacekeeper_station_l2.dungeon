@@ -1,0 +1,24 @@
+{
+  "metadata" : {
+    "name" : "neb-prefab-peacekeeper_station_l2",
+    "rules" : [
+    ],
+    "anchor" : [ "peacekeeper_station_l2" ],
+    "species" : "generic",
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 20,
+    "extendSurfaceFreeSpace" : 100,
+    "protected" : false
+  },
+
+  "parts" : [
+    {
+      "name" : "peacekeeper_station_l2",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "peacekeeper_station_l2.json" ]
+    }
+  ]
+}

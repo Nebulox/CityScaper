@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "neb-room-hylotl_room_a_4",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "hylotl_room_a_4" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "hylotl_room_a_4",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "hylotl_room_a_4.json" ]
+    }
+  ]
+}

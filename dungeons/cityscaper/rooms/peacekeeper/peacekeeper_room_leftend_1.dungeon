@@ -1,0 +1,23 @@
+{
+  "metadata" : {
+    "name" : "neb-room-peacekeeper_room_leftend_1",
+    "species" : "generic",
+    "rules" : [
+    ],
+    "anchor" : [ "peacekeeper_room_leftend_1" ],
+    "gravity" : 80,
+    "maxRadius" : 1000000,
+    "maxParts" : 1,
+    "protected" : true
+  },
+
+  "parts" : [
+    {
+      "name" : "peacekeeper_room_leftend_1",
+      "rules" : [
+        [ "ignorePartMaximumRule" ]
+      ],
+      "def" : [ "tmx", "peacekeeper_room_leftend_1.json" ]
+    }
+  ]
+}
