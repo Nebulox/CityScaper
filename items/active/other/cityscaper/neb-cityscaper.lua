@@ -17,7 +17,7 @@ function update(dt, fireMode, shiftHeld)
 	local pos = activeItem.ownerAimPosition()
 	pos[2] = pos[2] + self.offsetY
 	if not world.isTileProtected(pos) then
-	  world.spawnStagehand(pos, "neb-cityscaperdungeonplacer", { dungeonToSpawn = self.dungeon })
+	  world.spawnStagehand(pos, "neb-cityscaperdungeonplacer", { dungeonToSpawn = self.dungeon, id = player.id() })
 	  item.consume(1)
 	end
   elseif fireMode == "alt" and self.lastFireMode ~= "alt" then    
